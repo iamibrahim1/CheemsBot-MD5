@@ -4111,7 +4111,7 @@ case 'cuckold' : case 'ero' : case 'femdom' : case 'foot' :
 case 'gangbang' : case 'glasses' : case 'hentai' : case 'hentaigif' : 
 case 'jahy' : case 'maid' : case 'manga' : case 'neko' :
 case 'orgy' : case 'panties' : case 'pussy' : case 'sfwneko' :
-ase 'tentacles' : case 'thighs' : case 'yuri' : case 'zettairyouiki' :
+case 'tentacles' : case 'thighs' : case 'yuri' : case 'zettairyouiki' :
 {
 if (!m.isGroup) return m.reply(mess.group)
 if (!AntiNsfw) return m.reply(mess.nsfw)
