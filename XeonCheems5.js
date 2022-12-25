@@ -3748,12 +3748,15 @@ m.reply("Send video/audio")
 }
 }
 break
-case 'triggeredwebp': case 'wanted': {
-	            if (!/image/.test(mime)) return m.reply(`*Send/Reply Image With Caption* ${prefix + command}`)
+case 'brazzers' : case 'burn' : case 'ddungeon' : case 'deepfry' : case 'dictator' : case 'fire' : case 'gay' : case 'jail' :
+case 'lookwhatkarenhave' : case 'missionpassed' : case 'ps4' : case 'redple' : case 'sharpen' : case 'thanos' : case 'snpier' : case 'instagram' :
+case 'wasted' : case 'utatoo' : case 'rip' : case 'wanted' : case 'beautiful' : case 'blur' : case 'invert' : case 'greyscale' :
+case 'contrast' : case 'sepia' : case 'distort' : case 'glitch' : case 'approved' : case 'rejected' : case '3000years' : case 'circle' : {
+   if (!/image/.test(mime)) return m.reply(`*Send/Reply Image With Caption* ${prefix + command}`)
 	        	let { UploadFileUgu, webp2mp4File, TelegraPh } = require('./lib/uploader3')
                 let media = await XeonBotInc.downloadAndSaveMediaMessage(quoted)                
                 let anu = await TelegraPh(media)
-                let buf = await getBuffer(`https://cililitan.herokuapp.com/api/${command}?url=${anu}`)
+                let buf = await getBuffer(`https://api.zeeoneofc.xyz/api/image-effect/${command}?apikey=${global.keysxxx}&url=${anu}`)
                 XeonBotInc.sendMessage(m.chat, { image: buf, caption: `Made by ${botname}` }, { quoted: m}).catch ((err) => m.reply(mess.error))
                 }
                 break
@@ -6313,7 +6316,38 @@ const buttonMessage = {
 â• ${prefix}slow [reply aud]
 â• ${prefix}squirrel [reply aud]
 â• â•â•â•â•â•â•â•âœªã€Œ IMG EFFECT ã€
+â• ${prefix}brazzers [reply img]
+â• ${prefix}burn [reply img]
+â• ${prefix}ddungeon [reply img]
+â• ${prefix}deepfry [reply img]
+â• ${prefix}dictator [reply img]
+â• ${prefix}fire [reply img]
+â• ${prefix}gay [reply img]
+â• ${prefix}jail [reply img]
+â• ${prefix}lookwhatkarenhave [reply img]
+â• ${prefix}missionpassed [reply img]
+â• ${prefix}ps4 [reply img]
+â• ${prefix}redple [reply img]
+â• ${prefix}sharpen [reply img]
+â• ${prefix}thanos [reply img]
+â• ${prefix}snpier [reply img]
+â• ${prefix}instagram [reply img]
+â• ${prefix}wasted [reply img]
+â• ${prefix}utatoo [reply img]
+â• ${prefix}rip [reply img]
 â• ${prefix}wanted [reply img]
+â• ${prefix}beautiful [reply img]
+â• ${prefix}blur [reply img]
+â• ${prefix}invert [reply img]
+â• ${prefix}greyscale [reply img]
+â• ${prefix}contrast [reply img]
+â• ${prefix}sepia [reply img]
+â• ${prefix}distort [reply img]
+â• ${prefix}glitch [reply img]
+â• ${prefix}approved [reply img]
+â• ${prefix}rejected [reply img]
+â• ${prefix}3000years [reply img]
+â• ${prefix}circle [reply img]
 â• ${prefix}triggeredwebp [reply img]
 â• ${prefix}removebg [reply img]
 â• ${prefix}upscaler [reply img]
@@ -7192,7 +7226,38 @@ const buttons = [
 const buttonMessage = {
     image: unicorn,
     caption: `â•”â•â•â•â•â•âœªã€Œ IMG EFFECT ã€	
+â• ${prefix}brazzers [reply img]
+â• ${prefix}burn [reply img]
+â• ${prefix}ddungeon [reply img]
+â• ${prefix}deepfry [reply img]
+â• ${prefix}dictator [reply img]
+â• ${prefix}fire [reply img]
+â• ${prefix}gay [reply img]
+â• ${prefix}jail [reply img]
+â• ${prefix}lookwhatkarenhave [reply img]
+â• ${prefix}missionpassed [reply img]
+â• ${prefix}ps4 [reply img]
+â• ${prefix}redple [reply img]
+â• ${prefix}sharpen [reply img]
+â• ${prefix}thanos [reply img]
+â• ${prefix}snpier [reply img]
+â• ${prefix}instagram [reply img]
+â• ${prefix}wasted [reply img]
+â• ${prefix}utatoo [reply img]
+â• ${prefix}rip [reply img]
 â• ${prefix}wanted [reply img]
+â• ${prefix}beautiful [reply img]
+â• ${prefix}blur [reply img]
+â• ${prefix}invert [reply img]
+â• ${prefix}greyscale [reply img]
+â• ${prefix}contrast [reply img]
+â• ${prefix}sepia [reply img]
+â• ${prefix}distort [reply img]
+â• ${prefix}glitch [reply img]
+â• ${prefix}approved [reply img]
+â• ${prefix}rejected [reply img]
+â• ${prefix}3000years [reply img]
+â• ${prefix}circle [reply img]
 â• ${prefix}triggeredwebp [reply img]
 â• ${prefix}removebg [reply img]
 â• ${prefix}upscaler [reply img]
