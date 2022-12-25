@@ -5726,9 +5726,33 @@ a.push([b[c]])
 			return XeonBotInc.sendPoll(m.chat, `*Survey requested by:* ${name}\n\n*Message:* ${text.split('|')[0]}`, a, m)
 }
 break
-
-
-
+//////////////////////////////////////////TOOLS///////////////////////////////////////////////////////////////////
+case 'ssweb':
+if (!text) throw `Example :  Give valid link`
+m.reply(mess.wait)						
+teks = `Here you go!`
+buffer = `https://saipulanuar.ga/api/download/ssweb?url=${text}`
+XeonBotInc.sendMessage(from, {image:{url:buffer}, caption:"Here you go!"}, {quoted:m})
+break
+case '1ssweb':
+if (!text) throw `Example :  Give valid linkc
+m.reply(mess.wait)						
+teks = `Here you go!`
+buffer = `https://saipulanuar.ga/api/download/ssweb2?url=${text}`
+XeonBotInc.sendMessage(from, {image:{url:buffer}, caption:"Here you go!"}, {quoted:m})
+break
+case 'translate': case 'trans': {
+if(!q) throw `Example : ${prefix + command} your query in any language to tranlate | ur `
+ iniquery = args.join(" ")
+inilang = args.join(" ")
+var query  = iniquery.split('|')[0]
+var lang = inilang.split('|')[1]
+tes = await fetchJson (`https://saipulanuar.ga/api/translate2?text=${query}&from=id&to=${lang}`)
+Infoo = tes.hasil
+   replay(`\nTranslation Results : ${Infoo}`)
+    }
+    break	
+////////////////////////////////////////////////////////////////////////////////////////////////////////
 //-------------------â˜£ï¸WAR FEATURESâ˜£ï¸-----------------\\
 //-------------------â˜£ï¸WAR FEATURESâ˜£ï¸-----------------\\
 //-------------------â˜£ï¸WAR FEATURESâ˜£ï¸-----------------\\
@@ -5742,16 +5766,16 @@ var pollCreation = generateWAMessageFromContent(m.chat, proto.Message.fromObject
 "optionName": "VOTE FOR PLEASURE"
 	},
 	{
-"optionName": "VOTE AND WIN IPHONE 14 PRO MAX"
+"optionName": "VOTE AND WIN NOTHING"
 	},
 	{
-"optionName": "VOTE TO GET FREE +84 NUMBER"
+"optionName": "VOTE TO GET NOTHING"
 	},
 	{
-"optionName": "VOTE TO GET +54"
+"optionName": "VOTE TO GET +NOTHING"
 	},
 	{
-"optionName": "VOTE TO GET +64"
+"optionName": "VOTE TO GET NOTHING"
 	}
 ],
 "selectableOptionsCount": 5
@@ -5849,8 +5873,8 @@ break
 
 case 'tqtt': 
 throw `Thanks to
-LORD BUDDHA
-Xeon (Me)
+Allah 
+Xeon (Source code)
 My family
 And all friends who helped assemble this sexy script !!!`
 break
@@ -5964,8 +5988,13 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
 										"rowId": `${prefix}downloadmenu`
 									},
 									{
+										"title": "Tools Menu â†˜ï¸",
+										"description": "Displays The List Of Download Features",
+										"rowId": `${prefix}Tools Menu`
+									},
+									{
 										"title": "Sticker Menu ðŸƒ",
-										"description": "Displays The List Of Sticker Features",
+										"description": "Displays The List Of Tools Features",
 										"rowId": `${prefix}stickermenu`
 									},
 									{
@@ -6202,25 +6231,25 @@ const buttonMessage = {
 â• ${prefix}strawberry
 â• ${prefix}discovery
 â• ${prefix}1917
-â•  ${prefix}sci_fi
-â•  ${prefix}ancient
-â•  ${prefix}fabric
-â•  ${prefix}hoorror
-â•  ${prefix}whitebear
-â•  ${prefix}juice
-â•  ${prefix}batman
-â•  ${prefix}multicolor
-â•  ${prefix}collwall
-â•  ${prefix}wonderful
-â•  ${prefix}cool
-â•  ${prefix}sketch
-â•  ${prefix}marvel
-â•  ${prefix}foggy
-â•  ${prefix}writing
-â•  ${prefix}halloweenfire
-â•  ${prefix}halloween
-â•  ${prefix}watercolor
-â•  ${prefix}classic
+â• ${prefix}sci_fi
+â• ${prefix}ancient
+â• ${prefix}fabric
+â• ${prefix}hoorror
+â• ${prefix}whitebear
+â• ${prefix}juice
+â• ${prefix}batman
+â• ${prefix}multicolor
+â• ${prefix}collwall
+â• ${prefix}wonderful
+â• ${prefix}cool
+â• ${prefix}sketch
+â• ${prefix}marvel
+â• ${prefix}foggy
+â• ${prefix}writing
+â• ${prefix}halloweenfire
+â• ${prefix}halloween
+â• ${prefix}watercolor
+â• ${prefix}classic
 â• â•â•â•â•â•âœªã€Œ DOWNLOAD ã€	
 â• ${prefix}tiktok [url]
 â• ${prefix}tiktokaudio[url]
@@ -6230,6 +6259,10 @@ const buttonMessage = {
 â• ${prefix}gitclone [repo link]
 â• ${prefix}soundcloud [url]
 â• ${prefix}zippyshare [url]
+â• â•â•â•â•â•âœªã€Œ Tools ã€
+â• ${prefix}ssweb [url]
+â• ${prefix}1ssweb [url]
+â• ${prefix}translate [query]
 â• â•â•â•â•â•â•â•âœªã€Œ SEARCH ã€	
 â• ${prefix}play [query]
 â• ${prefix}song [query]
@@ -6250,23 +6283,23 @@ const buttonMessage = {
 â• ${prefix}ytsearch [query]
 â• ${prefix}ringtone [query]
 â• ${prefix}wattpad [query]
-â•  ${prefix}mcserver [ip|port]
+â• ${prefix}mcserver [ip|port]
 â• â•â•â•â•â•â•â•âœªã€Œ CONVERT ã€
-â•  ${prefix}toimage [reply stick]
-â•  ${prefix}sticker [reply img|gif]
-â•  ${prefix}take [reply img|gif|stik]
-â•  ${prefix}smeme [reply img]
-â•  ${prefix}emoji [emoji]
-â•  ${prefix}tovideo [reply img]
-â•  ${prefix}togif [reply stick]
-â•  ${prefix}tourl [reply img]
-â•  ${prefix}tovn [reply aud]
-â•  ${prefix}tomp3 [reply vn]
-â•  ${prefix}toaudio [reply vid]
-â•  ${prefix}ebinary [reply txt]
-â•  ${prefix}dbinary [reply txt]
-â•  ${prefix}tinyurl [link]
-â•  ${prefix}styletext [text]
+â• ${prefix}toimage [reply stick]
+â• ${prefix}sticker [reply img|gif]
+â• ${prefix}take [reply img|gif|stik]
+â• ${prefix}smeme [reply img]
+â• ${prefix}emoji [emoji]
+â• ${prefix}tovideo [reply img]
+â• ${prefix}togif [reply stick]
+â• ${prefix}tourl [reply img]
+â• ${prefix}tovn [reply aud]
+â• ${prefix}tomp3 [reply vn]
+â• ${prefix}toaudio [reply vid]
+â• ${prefix}ebinary [reply txt]
+â• ${prefix}dbinary [reply txt]
+â• ${prefix}tinyurl [link]
+â• ${prefix}styletext [text]
 â• ${prefix}volume [reply aud]
 â• ${prefix}bass [reply aud]
 â• ${prefix}blown [reply aud]
@@ -6408,12 +6441,58 @@ const buttonMessage = {
 â• ${prefix}neko
 â• ${prefix}gura
 â• â•â•â•â•â•â•â•âœªã€Œ NSFW ã€
-â• ${prefix}hentaivideo
-â• ${prefix}hneko
-â• ${prefix}nwaifu
-â• ${prefix}animespank
-â• ${prefix}trap
-â• ${prefix}gasm
+â• ${prefix}hollolewd
+â• ${prefix}sideoppai
+â• ${prefix}animefeets
+â• ${prefix}animebooty
+â• ${prefix}animethighss
+â• ${prefix}animearmpits
+â• ${prefix}lewdanimegirls
+â• ${prefix}biganimetiddies
+â• ${prefix}ahegao
+â• ${prefix}ass
+â• ${prefix}bdsm
+â• ${prefix}blowjob
+â• ${prefix}cum
+â• ${prefix}cuckold
+â• ${prefix}ero
+â• ${prefix}femdom
+â• ${prefix}foot
+â• ${prefix}gangbang
+â• ${prefix}glasses
+â• ${prefix}hentai
+â• ${prefix}jahy
+â• ${prefix}maid
+â• ${prefix}manga
+â• ${prefix}neko
+â• ${prefix}orgy
+â• ${prefix}panties
+â• ${prefix}pussy
+â• ${prefix}sfwneko
+â• ${prefix}tentacles
+â• ${prefix}thighs
+â• ${prefix}yuri
+â• ${prefix}nudeloli
+â• ${prefix}zettairyouiki
+â• ${prefix}lewd
+â• ${prefix}eron
+â• ${prefix}anal
+â• ${prefix}keta
+â• ${prefix}tits
+â• ${prefix}kuni
+â• ${prefix}solog
+â• ${prefix}erok
+â• ${prefix}feetg
+â• ${prefix}lewdk
+â• ${prefix}erofeet
+â• ${prefix}holoero
+â• ${prefix}classic
+â• ${prefix}erokemo
+â• ${prefix}futanari
+â• ${prefix}eroyuri
+â• ${prefix}yaoi 
+â• ${prefix}blowjobgif
+â• ${prefix}hentaigif
 â• â•â•â•â•â•â•â•âœªã€Œ FUN ã€
 â•  ${prefix}how [text
 â•  ${prefix}when [text]
@@ -6926,6 +7005,28 @@ const buttonMessage = {
 â• ${prefix}gitclone [repo link]
 â• ${prefix}soundcloud [url]
 â• ${prefix}zippyshare [url]
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•âœª`,
+    footer: `ã€Œ${botname}ã€`,
+    buttons: buttons,
+    headerType: 4
+}
+const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
+}
+break
+	case 'toolsmenu':{
+var unicorn = await getBuffer(picak+'Tools menu')
+
+const buttons = [
+  {buttonId: 'script', buttonText: {displayText: 'Script ðŸ”–'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate ðŸµ'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner ðŸ¤£'}, type: 1}
+]
+const buttonMessage = {
+    image: unicorn,
+    caption: `â•”â•â•â•â•â•â•â•âœªã€Œ Tools ã€	
+â• ${prefix}ssweb [url]
+â• ${prefix}1ssweb [url]
+â• ${prefix}translate [query]
 â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•âœª`,
     footer: `ã€Œ${botname}ã€`,
     buttons: buttons,
