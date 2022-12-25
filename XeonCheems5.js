@@ -4103,15 +4103,15 @@ m.reply(mess.wait)
   }     
             await XeonBotInc.sendMessage(m.chat, button2Messages, { quoted:m }).catch(err => {
                     return('Error!')
-                })
+                })}
 				break
 				
-	    case 'ahegao' : case 'ass' : case 'bdsm' : case 'blowjob' : case 'cum' :
-		case 'cuckold' : case 'ero' : case 'femdom' : case 'foot' : 
-		case 'gangbang' : case 'glasses' : case 'hentai' : case 'hentaigif' : 
-		case 'jahy' : case 'maid' : case 'manga' : case 'neko' :
-		case 'orgy' : case 'panties' : case 'pussy' : case 'sfwneko' :
-		case 'tentacles' : case 'thighs' : case 'yuri' : case 'zettairyouiki' :
+case 'ahegao' : case 'ass' : case 'bdsm' : case 'blowjob' : case 'cum' :
+case 'cuckold' : case 'ero' : case 'femdom' : case 'foot' : 
+case 'gangbang' : case 'glasses' : case 'hentai' : case 'hentaigif' : 
+case 'jahy' : case 'maid' : case 'manga' : case 'neko' :
+case 'orgy' : case 'panties' : case 'pussy' : case 'sfwneko' :
+ase 'tentacles' : case 'thighs' : case 'yuri' : case 'zettairyouiki' :
 {
 if (!m.isGroup) return m.reply(mess.group)
 if (!AntiNsfw) return m.reply(mess.nsfw)
@@ -4128,11 +4128,11 @@ m.reply(mess.wait)
   }     
             await XeonBotInc.sendMessage(m.chat, button2Messages, { quoted:m }).catch(err => {
                     return('Error!')
-                })
+                })}
 				break
 				
 				  case 'nudeloli' :
-{
+			{
 if (!m.isGroup) return m.reply(mess.group)
 if (!AntiNsfw) return m.reply(mess.nsfw)
 m.reply(mess.wait)
@@ -4148,7 +4148,7 @@ m.reply(mess.wait)
   }     
             await XeonBotInc.sendMessage(m.chat, button2Messages, { quoted:m }).catch(err => {
                     return('Error!')
-                })
+                })}
 				break
 				
    case 'lewd' : case 'eron' : case 'anal' : case 'keta' : case 'tits' :
@@ -4171,7 +4171,7 @@ m.reply(mess.wait)
   }     
             await XeonBotInc.sendMessage(m.chat, button2Messages, { quoted:m }).catch(err => {
                     return('Error!')
-                })
+                })}
 				break
 				
 				case 'blowjobgif': case 'bj' :
