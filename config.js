@@ -1,6 +1,11 @@
 const fs = require('fs')
 const chalk = require('chalk')
-
+//api
+global.keysZens = ['285c513f6556', '68637855ac', '66aa575454', 'ead81e891b', '8331b843f7', 'ec3fe6f05831', '0c65d4c037']
+global.zenzkey = keysZens[Math.floor(keysZens.length * Math.random())]
+global.lolhuman = "85faf717d0545d14074659ad"
+global.ibrahim = ['TcjDtsMJ', 'kUF2aBjM', '2nlLuqfy', 'rErGxBzr', 'KMCJgIRH','m242ANUO', 'WoH9KRqY', 'qjOpwJIA', 'xsTFGsFc', 'wYBojGOu']
+global.keysxxx = ibrahim[Math.floor(ibrahim.length * Math.random())]
 //aumto functioner
 global.autoTyping = false //auto tying in gc (true to on, false to off)
 global.autoRecord = true //auto recording (true to on, false to off)
