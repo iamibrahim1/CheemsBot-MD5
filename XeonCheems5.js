@@ -4199,7 +4199,7 @@ break
     if (!AntiNsfw) return reply(mess.nonsfw)
 reply(mess.waiting)
       
-let bjf = await getBuffer(https://zenzapis.xyz/api/morensfw/${command}?apikey=${global.zenzkey}`)
+let bjf = await getBuffer(`https://zenzapis.xyz/api/morensfw/${command}?apikey=${global.zenzkey}`)
 let bjif = await GIFBufferToVideoBuffer(bjf)
 let trapbot = [
     {buttonId: `${command}`, buttonText: {displayText: `Next âš¡`}, type: 1},
