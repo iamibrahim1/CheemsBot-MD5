@@ -5744,7 +5744,7 @@ buffer = `https://saipulanuar.ga/api/download/ssweb?url=${text}`
 XeonBotInc.sendMessage(from, {image:{url:buffer}, caption:"Here you go!"}, {quoted:m})
 break
 case '1ssweb':
-if (!text) throw `Example :  Give valid linkc
+if (!text) throw `Example :  Give valid link`
 m.reply(mess.wait)						
 teks = `Here you go!`
 buffer = `https://saipulanuar.ga/api/download/ssweb2?url=${text}`
