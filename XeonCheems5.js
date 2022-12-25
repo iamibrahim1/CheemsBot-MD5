@@ -4174,30 +4174,36 @@ m.reply(mess.wait)
                 })}
 				break
 				
-				case 'blowjobgif': case 'bj' :
+				case 'blowjobgif': case 'bj' :{
     if (isBan) return reply(mess.banned)	 			
     if (!AntiNsfw) return reply(mess.nonsfw)
 reply(mess.waiting)
 bjd = await axios.get(`https://api.waifu.pics/nsfw/blowjob`)         
-  let bjf = await getBuffer(bjd.data.url)
-let bjif = await GIFBufferToVideoBuffer(bjf)   
-     let button2Messages = {
-   video: bjif, gifPlayback:true,
-   caption:  `Here you go!`,
-  buttons: trapbot,
-  headerType: 1
+let bjf = await getBuffer(bjd.data.url)
+let bjif = await GIFBufferToVideoBuffer(bjf) 
+let trapbot = [
+    {buttonId: `${command}`, buttonText: {displayText: `Next âš¡`}, type: 1},
+    ]
+let button2Messages = {
+video: bjif, gifPlayback:true,
+caption:  `Here you go!`,
+buttons: trapbot,
+headerType: 1
   } 
    await XeonBotInc.sendMessage(m.chat, button2Messages, { quoted:m }).catch(err => {
                     return('Error!')
-                })
+                })}
 break
-			case 'hentaigif': 
+			case 'hentaigif': {
     if (isBan) return reply(mess.banned)	 			
     if (!AntiNsfw) return reply(mess.nonsfw)
 reply(mess.waiting)
       
 let bjf = await getBuffer(https://zenzapis.xyz/api/morensfw/${command}?apikey=${global.zenzkey}`)
 let bjif = await GIFBufferToVideoBuffer(bjf)
+let trapbot = [
+    {buttonId: `${command}`, buttonText: {displayText: `Next âš¡`}, type: 1},
+    ]
  let button2Messages = {
    video: bjif, gifPlayback:true,
    caption:  `Here you go!`,
@@ -4206,7 +4212,7 @@ let bjif = await GIFBufferToVideoBuffer(bjf)
   } 
    await XeonBotInc.sendMessage(m.chat, button2Messages, { quoted:m }).catch(err => {
                     return('Error!')
-                })
+                })}
 break			
 /////////////////////////////////////////NFSW END///////////////////////////////////////////////////
    case 'animesmug':
