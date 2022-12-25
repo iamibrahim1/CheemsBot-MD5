@@ -265,7 +265,7 @@ XeonBotInc.sendMessage(m.chat, {
             console.log('Reseted Limit')
         }, {
             scheduled: true,
-            timezone: "Asia/Kolkata"
+            timezone: "Asia/Karachi"
         })   
         
 // total hit
@@ -1000,7 +1000,7 @@ let buttons = [
 {buttonId: `owner`, buttonText: {displayText: 'Owner ðŸŒº'}, type: 1}
 ]
 let buttonMessage = {
-image: {url: `https://i.ibb.co/w46VQ8D/Picsart-22-10-08-06-46-30-674.jpg`},
+image: {url: `https://i.ibb.co/svRfR9h/Menu2.png`},
 jpegThumbnail: log0,
 caption: teks,
 footer: `${botname}`,
@@ -1008,11 +1008,11 @@ buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title:"I deserve something for my hardwork",
-body: "Click to donate", 
+body: "Click ", 
 thumbnail: fs.readFileSync("XeonMedia/theme/cheemspic.jpg"),
 mediaType:1,
-mediaUrl: 'https://i.ibb.co/w46VQ8D/Picsart-22-10-08-06-46-30-674.jpg',
-sourceUrl: "https://i.ibb.co/w46VQ8D/Picsart-22-10-08-06-46-30-674.jpg"
+mediaUrl: 'https://i.ibb.co/svRfR9h/Menu2.png',
+sourceUrl: "https://i.ibb.co/svRfR9h/Menu2.png"
 }}
 }
 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
@@ -2281,7 +2281,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             break
             case 'togif': {
                 if (!quoted) throw 'Reply Image'
-                if (!/webp/.test(mime)) throw `balas stiker dengan caption *${prefix + command}*`
+                if (!/webp/.test(mime)) throw `reply sticker with caption *${prefix + command}*`
                 m.reply(mess.wait)
 		let { webp2mp4File } = require('./lib/uploader')
                 let media = await XeonBotInc.downloadAndSaveMediaMessage(quoted)
@@ -2527,7 +2527,7 @@ ${themeemoji} Author : ${anu.author.name}
 ${themeemoji} Like : ${anu.like}
 ${themeemoji} Caption : ${anu.caption}
 ${themeemoji} Url : ${anu.media[0]}
-Untuk Download Media Silahkan Klik salah satu Button dibawah ini atau masukkan command ytmp3/ytmp4 dengan url diatas
+To Download Media Please click one of the buttons below or enter the command ytmp3/ytmp4 with the url above
 `,
 			footer: XeonBotInc.user.name,
 			buttons,
@@ -3998,6 +3998,7 @@ case 'yaoi':
 				var but = [{buttonId: `${command}`, buttonText: { displayText: "Nextâž¡ï¸" }, type: 1 }]
 				XeonBotInc.sendMessage(from, { caption: "Here you go!", image: { url: pickRandom(data.result) }, buttons: but, footer: `${botname}` }, { quoted: m })
  			    break
+//////////////////////////////////////////////NSFW/////////////////////////////////////////////////			
 case 'hentaivid': case 'hentaivideo': {
 	if (!m.isGroup) return m.reply(mess.group)
 if (!AntiNsfw) return m.reply(mess.nsfw)
@@ -4081,8 +4082,131 @@ m.reply(mess.wait)
             await XeonBotInc.sendMessage(m.chat, buttonsssMessages,{ quoted:m }).catch(err => {
                     return('Error!')
                 })
-break   
-case 'animesmug':
+		break
+case 'hollolewd' : case 'sideoppai' : case 'animefeets|' : case 'animebooty' :
+case 'animethighss' : case 'animearmpits' : case 'lewdanimegirls' : case 'biganimetiddies' :{
+if (!m.isGroup) return m.reply(mess.group)
+if (!AntiNsfw) return m.reply(mess.nsfw)
+m.reply(mess.wait)
+ waifudd = await getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=${global.lolkey}`)       
+ let trapbot = [
+    {buttonId: `${command}`, buttonText: {displayText: `Next âš¡`}, type: 1},
+    ]
+  let button2Messages = {
+   image: waifudd,
+   caption:  `Here you go!`,
+  buttons: trapbot,
+  headerType: 1
+  }     
+            await XeonBotInc.sendMessage(m.chat, button2Messages, { quoted:m }).catch(err => {
+                    return('Error!')
+                })
+				break
+				
+	    case 'ahegao' : case 'ass' : case 'bdsm' : case 'blowjob' : case 'cum' :
+		case 'cuckold' : case 'ero' : case 'femdom' : case 'foot' : 
+		case 'gangbang' : case 'glasses' : case 'hentai' : case 'hentaigif' : 
+		case 'jahy' : case 'maid' : case 'manga' : case 'neko' :
+		case 'orgy' : case 'panties' : case 'pussy' : case 'sfwneko' :
+		case 'tentacles' : case 'thighs' : case 'yuri' : case 'zettairyouiki' :
+{
+if (!m.isGroup) return m.reply(mess.group)
+if (!AntiNsfw) return m.reply(mess.nsfw)
+m.reply(mess.wait)
+ waifudd = await getBuffer(`https://zenzapis.xyz/api/morensfw/${command}?apikey=${global.zenzkey}`)       
+ let trapbot = [
+    {buttonId: `${command}`, buttonText: {displayText: `Next âš¡`}, type: 1},
+    ]
+  let button2Messages = {
+   image: waifudd,
+   caption:  `Here you go!`,
+  buttons: trapbot,
+  headerType: 1
+  }     
+            await XeonBotInc.sendMessage(m.chat, button2Messages, { quoted:m }).catch(err => {
+                    return('Error!')
+                })
+				break
+				
+				  case 'nudeloli' :
+{
+if (!m.isGroup) return m.reply(mess.group)
+if (!AntiNsfw) return m.reply(mess.nsfw)
+m.reply(mess.wait)
+ waifudd = await getBuffer(`https://saipulanuar.ga/api/nsfwloli`)       
+ let trapbot = [
+    {buttonId: `${command}`, buttonText: {displayText: `Next âš¡`}, type: 1},
+    ]
+  let button2Messages = {
+   image: waifudd,
+   caption:  `Here you go!`,
+  buttons: trapbot,
+  headerType: 1
+  }     
+            await XeonBotInc.sendMessage(m.chat, button2Messages, { quoted:m }).catch(err => {
+                    return('Error!')
+                })
+				break
+				
+   case 'lewd' : case 'eron' : case 'anal' : case 'keta' : case 'tits' :
+		case 'kuni' : case 'solog' : case 'erok' : case 'feetg' : 
+		case 'lewdk' : case 'erofeet' : case 'holoero' : case 'classic' : 
+		case 'erokemo' : case 'futanari' : case 'eroyuri' : case 'yaoi' :
+{
+if (!m.isGroup) return m.reply(mess.group)
+if (!AntiNsfw) return m.reply(mess.nsfw)
+m.reply(mess.wait)
+ waifudd = await getBuffer(`https://api.lolhuman.xyz/api/random2/${command}?apikey=${global.lolkey}`)       
+ let trapbot = [
+    {buttonId: `${command}`, buttonText: {displayText: `Next âš¡`}, type: 1},
+    ]
+  let button2Messages = {
+   image: waifudd,
+   caption:  `Here you go!`,
+  buttons: trapbot,
+  headerType: 1
+  }     
+            await XeonBotInc.sendMessage(m.chat, button2Messages, { quoted:m }).catch(err => {
+                    return('Error!')
+                })
+				break
+				
+				case 'blowjobgif': case 'bj' :
+    if (isBan) return reply(mess.banned)	 			
+    if (!AntiNsfw) return reply(mess.nonsfw)
+reply(mess.waiting)
+bjd = await axios.get(`https://api.waifu.pics/nsfw/blowjob`)         
+  let bjf = await getBuffer(bjd.data.url)
+let bjif = await GIFBufferToVideoBuffer(bjf)   
+     let button2Messages = {
+   video: bjif, gifPlayback:true,
+   caption:  `Here you go!`,
+  buttons: trapbot,
+  headerType: 1
+  } 
+   await XeonBotInc.sendMessage(m.chat, button2Messages, { quoted:m }).catch(err => {
+                    return('Error!')
+                })
+break
+			case 'hentaigif': 
+    if (isBan) return reply(mess.banned)	 			
+    if (!AntiNsfw) return reply(mess.nonsfw)
+reply(mess.waiting)
+      
+let bjf = await getBuffer(https://zenzapis.xyz/api/morensfw/${command}?apikey=${global.zenzkey}`)
+let bjif = await GIFBufferToVideoBuffer(bjf)
+ let button2Messages = {
+   video: bjif, gifPlayback:true,
+   caption:  `Here you go!`,
+  buttons: trapbot,
+  headerType: 1
+  } 
+   await XeonBotInc.sendMessage(m.chat, button2Messages, { quoted:m }).catch(err => {
+                    return('Error!')
+                })
+break			
+/////////////////////////////////////////NFSW END///////////////////////////////////////////////////
+   case 'animesmug':
 m.reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/smug`)
                            var wbuttsss = [
