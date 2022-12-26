@@ -5878,6 +5878,27 @@ reply("Error! ")
 }
 }
 break
+		case 'twitter':{
+if (!q) return reply('Example :\${prefix}$facebook your video or picture link)
+reply(mess.wait)
+fetchJson(`https://api.akuari.my.id/downloader/twitter2?link=${q}`)
+.then(tt_res => {
+reply(`𝗧𝗜𝗞𝗧𝗢𝗞 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗
+Author: Ibrahim
+Title: ${tt_res.hasil.title}
+Source: ${q}`
+}){else if (tt_res.result.url === "mp4") {
+conn.sendMessage(from,{video:{url:tt_res.result.url}, caption:'Here it is...'}, {quotes:msg})
+}){else if (tt_res.result.url === "jpg") {
+XeonBotInc.sendMessage(from, {image:tt_res.result.url, caption:'Here it is...'}, {quoted:m})}
+ else {
+reply("Error! ")
+}
+}.catch((err) => {
+reply('Error Occurred!!\nUrl is not valid')
+})
+}
+break
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 //-------------------â˜£ï¸WAR FEATURESâ˜£ï¸-----------------\\
 //-------------------â˜£ï¸WAR FEATURESâ˜£ï¸-----------------\\
@@ -6381,6 +6402,7 @@ const buttonMessage = {
 │⭔  ${prefix}tiktokaudio[url]
 │⭔  ${prefix}mediafire [url]
 │⭔  ${prefix}facebook [url]
+│⭔  ${prefix}twitter [url]
 │⭔  ${prefix}ytmp3 [url|quality]
 │⭔  ${prefix}ytmp4 [url|quality]
 │⭔  ${prefix}ig [url]
@@ -7162,6 +7184,7 @@ const buttonMessage = {
 â• ${prefix}tiktok [url]
 â• ${prefix}tiktokaudio[url]
 â• ${prefix}facebook [url]
+â• ${prefix}twitter [url]
 â• ${prefix}mediafire [url]
 â• ${prefix}ytmp3 [url|quality]
 â• ${prefix}ytmp4 [url|quality]
