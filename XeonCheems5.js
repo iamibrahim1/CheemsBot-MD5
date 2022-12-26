@@ -5783,7 +5783,7 @@ Infoo = tes.hasil
 			break	
 			case '1pintrest':{
 m.reply(mess.wait)	
- if (!text) return reply(`Example :\n${prefix + command} loli)					
+ if (!text) return reply(`Example :\n${prefix + command} loli`)					
  waifudd = await axios.get(`https://saipulanuar.ga/api/pinterest?query=${text}`)
                            var wbuttsss = [
         {buttonId: `.${prefix + command}${text}`, buttonText: {displayText: `Next âœ¨`}, type: 1},
@@ -5850,7 +5850,7 @@ reply("Error! ")
 }
 break
 		case 'facebook':{
-if (!q) return reply('Example :\${prefix}$facebook https://facebook.com/someting')
+if (!q) return reply(`Example :\${prefix}$facebook https://facebook.com/someting`)
 reply(mess.wait)
 fetchJson(`https://saipulanuar.ga/api/download/fb?url=${q}`)
 .then(tt_res => {
@@ -5866,7 +5866,7 @@ reply('Error Occurred!!\nUrl is not valid')
 }
 break
 		case 'pintrestdl':{
-if (!q) return reply('Example :\${prefix}$facebook https://facebook.com/someting')
+if (!q) return reply(`Example :\${prefix}$pintrestdl your link `)
 reply(mess.wait)
  waifudd = await axios.get(`https://api.akuari.my.id/downloader/pindl?link=${q}`)
  if (waifudd.data.data.url === "mp4") {
@@ -5879,7 +5879,7 @@ reply("Error! ")
 }
 break
 		case 'twitter':{
-if (!q) return reply('Example :\${prefix}$facebook your video or picture link)
+if (!q) return reply(`Example :\${prefix}$twitter your video or picture link`)
 reply(mess.wait)
 fetchJson(`https://api.akuari.my.id/downloader/twitter2?link=${q}`)
 .then(tt_res => {
