@@ -5781,6 +5781,23 @@ Infoo = tes.hasil
     }
 
 			break	
+			case '1pintrest':{
+m.reply(mess.wait)	
+ if (!text) return reply(`Example :\n${prefix + command} loli)					
+ waifudd = await axios.get(`https://saipulanuar.ga/api/pinterest?query=${text}`)
+                           var wbuttsss = [
+        {buttonId: `.${prefix + command}${text}`, buttonText: {displayText: `Next âœ¨`}, type: 1},
+        ]
+      let button12ssMessages = {
+       image: {url:waifudd.data.url},
+       caption:  `Here you go!`,
+      footer: `${global.botname}`,
+      buttons: wbuttsss,
+      headerType: 4
+      }     
+            await XeonBotInc.sendMessage(m.chat, button12ssMessages,{ quoted:m }).catch(err => {
+                    return('Error!')
+                })}
 ///////////////////////////////////////////Instagram/////////////////////////////////////
 			case 'igdl': case 'instagram': case 'instagramreels': case 'igreels': {
     if (isBan) return reply(mess.banned)	 			
@@ -5830,6 +5847,22 @@ XeonBotInc.sendMessage(from, {image:{url:args[1]}, caption:'Here it is...'}, {qu
 } else {
 reply("Error! ")
 }
+}
+break
+		case 'facebook':{
+if (!q) return reply('Example :\${prefix}$facebook https://facebook.com/someting')
+reply(mess.wait)
+fetchJson(`https://saipulanuar.ga/api/download/fb?url=${q}`)
+.then(tt_res => {
+reply(`Facebook Video Dowwnloader
+Owner: Ibrahim
+Title: ${tt_res.result.title}
+Source: ${q}
+Video is being sent...`)
+conn.sendMessage(from,{video:{url:tt_res.result.hd}, caption:'No Watermark!'}, {quotes:msg})
+}).catch((err) => {
+reply('Error Occurred!!\nUrl is not valid')
+})
 }
 break
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -6334,6 +6367,7 @@ const buttonMessage = {
 │⭔  ${prefix}tiktok [url]
 │⭔  ${prefix}tiktokaudio[url]
 │⭔  ${prefix}mediafire [url]
+│⭔  ${prefix}facebook [url]
 │⭔  ${prefix}ytmp3 [url|quality]
 │⭔  ${prefix}ytmp4 [url|quality]
 │⭔  ${prefix}ig [url]
@@ -6348,6 +6382,7 @@ const buttonMessage = {
 ───────────────────┈❖ SEARCH❖┈───	 	
 │⭔  ${prefix}play [query]
 │⭔  ${prefix}song [query]
+│⭔  ${prefix}1pintrest
 │⭔  ${prefix}yts [query]
 │⭔  ${prefix}lyrics [query]
 │⭔  ${prefix}google [query]
@@ -6884,8 +6919,1077 @@ const buttonMessage = {
 const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
 }
 break
-    
-       case 'sound1':
+    case 'ownermenu':{
+	   var unicorn = await getBuffer(picak+'Owner Menu')
+const buttons = [
+  {buttonId: 'script', buttonText: {displayText: 'Script ðŸ”–'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate ðŸµ'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner ðŸ¤£'}, type: 1}
+]
+const buttonMessage = {
+    image: unicorn,
+    caption: `â•”â•â•â•â•â•â•â•âœªã€Œ OWNER ã€	
+â•  ${prefix}self
+â•  ${prefix}public
+â•  ${prefix}join [link]
+â•  ${prefix}leavegc
+â•  ${prefix}setbio
+â•  ${prefix}hijack
+â•  ${prefix}creategroup [name]
+â•  ${prefix}block [user]
+â•  ${prefix}unblock [user]
+â•  ${prefix}broadcast [text]
+â•  ${prefix}setppbot [image]
+â•  ${prefix}setthumb [reply img]
+â•  ${prefix}setexif
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•âœª`,
+    footer: `ã€Œ${botname}ã€`,
+    buttons: buttons,
+    headerType: 4
+}
+const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
+}
+break
+            case 'groupmenu':{
+var unicorn = await getBuffer(picak+'Group Menu')
+
+const buttons = [
+  {buttonId: 'script', buttonText: {displayText: 'Script ðŸ”–'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate ðŸµ'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner ðŸ¤£'}, type: 1}
+]
+const buttonMessage = {
+    image: unicorn,
+    caption: `â•”â•â•â•â•â•â•â•âœªã€Œ GROUP ã€	
+â• ${prefix}grouplink
+â• ${prefix}ephemeral [option]
+â• ${prefix}setgcpp [image]
+â• ${prefix}setname [text]
+â• ${prefix}setdesc [text]
+â• ${prefix}group
+â• ${prefix}botgroups
+â• ${prefix}resetgrouplink
+â• ${prefix}editinfo [option]
+â• ${prefix}add [user]
+â• ${prefix}menfess [number]
+â• ${prefix}kick [reply/tag]
+â• ${prefix}hidetag [text]
+â• ${prefix}tagall [text]
+â• ${prefix}autosticker [on/off]
+â• ${prefix}autostickerpc [on/off]
+â• ${prefix}leveling [on/off]
+â• ${prefix}antilinkgc [on/off]
+â• ${prefix}antilinktg [on/off]
+â• ${prefix}antilinktt [on/off]
+â• ${prefix}antilinkytch [on/off]
+â• ${prefix}antilinkytvid [on/off]
+â• ${prefix}antilinkig [on/off]
+â• ${prefix}antilinkfb [on/off]
+â• ${prefix}antilinktwit [on/off]
+â• ${prefix}antilinkall [on/off]
+â• ${prefix}antivirus [on/off]
+â• ${prefix}antitoxic [on/off]
+â• ${prefix}antiwame [on/off]
+â• ${prefix}nsfw [on/off]
+â• ${prefix}promote [reply/tag]
+â• ${prefix}demote [reply/tag]
+â• ${prefix}react [reply emoji]
+â• ${prefix}getpp [reply user]
+â• ${prefix}vote
+â• ${prefix}devote
+â• ${prefix}upvote
+â• ${prefix}checkvote
+â• ${prefix}delvote
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•âœª`,
+    footer: `ã€Œ${botname}ã€`,
+    buttons: buttons,
+    headerType: 4
+}
+const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
+}
+break
+case 'makermenu':{
+var unicorn = await getBuffer(picak+'Maker Menu')
+
+const buttons = [
+  {buttonId: 'script', buttonText: {displayText: 'Script ðŸ”–'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate ðŸµ'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner ðŸ¤£'}, type: 1}
+]
+const buttonMessage = {
+    image: unicorn,
+    caption: `â•”â•â•â•â•â•â•â•âœªã€Œ MAKER ã€	
+â• ${prefix}candy
+â• ${prefix}8bit
+â• ${prefix}horror
+â• ${prefix}hoorror
+â• ${prefix}retro
+â• ${prefix}blackpinkneon
+â• ${prefix}deepsea
+â• ${prefix}scifi
+â• ${prefix}fiction
+â• ${prefix}berry
+â• ${prefix}fruitjuice
+â• ${prefix}biscuit
+â• ${prefix}wood
+â• ${prefix}chocolate
+â• ${prefix}matrix
+â• ${prefix}blood
+â• ${prefix}halloween
+â• ${prefix}wicker
+â• ${prefix}darkgold
+â• ${prefix}firework
+â• ${prefix}skeleton
+â• ${prefix}sand
+â• ${prefix}glue
+â• ${prefix}leaves
+â• ${prefix}magma
+â• ${prefix}lava
+â• ${prefix}rock
+â• ${prefix}bloodglas
+â• ${prefix}underwater
+â• ${prefix}textmaker
+â• ${prefix}honey
+â• ${prefix}ice
+â• ${prefix}watercolor
+â• ${prefix}multicolor
+â• ${prefix}snow
+â• ${prefix}harrypot
+â• ${prefix}harrypotter
+â• ${prefix}brokenglass
+â• ${prefix}waterpipe
+â• ${prefix}spooky
+â• ${prefix}circuit
+â• ${prefix}metallic
+â• ${prefix}demon
+â• ${prefix}sparklechristmas
+â• ${prefix}christmas
+â• ${prefix}3dchristmas
+â• ${prefix}3dbox
+â• ${prefix}waterdrop
+â• ${prefix}lion2
+â• ${prefix}papercut
+â• ${prefix}transformer
+â• ${prefix}neondevil
+â• ${prefix}3davengers
+â• ${prefix}3dstone
+â• ${prefix}3dstone2
+â• ${prefix}summertime
+â• ${prefix}thunder
+â• ${prefix}window
+â• ${prefix}graffiti
+â• ${prefix}graffitibike
+â• ${prefix}pornhub
+â• ${prefix}glitch
+â• ${prefix}blackpink
+â• ${prefix}glitch2
+â• ${prefix}glitch3
+â• ${prefix}3dspace
+â• ${prefix}lion
+â• ${prefix}3dneon
+â• ${prefix}greenneon
+â• ${prefix}bokeh
+â• ${prefix}holographic
+â• ${prefix}bear
+â• ${prefix}wolf
+â• ${prefix}joker
+â• ${prefix}dropwater
+â• ${prefix}dropwater2
+â• ${prefix}thewall
+â• ${prefix}neonlight
+â• ${prefix}natural
+â• ${prefix}carbon
+â• ${prefix}pencil
+â• ${prefix}blackpink2
+â• ${prefix}neon
+â• ${prefix}neonlight2
+â• ${prefix}toxic
+â• ${prefix}strawberry
+â• ${prefix}discovery
+â• ${prefix}1917
+â•  ${prefix}sci_fi
+â•  ${prefix}ancient
+â•  ${prefix}fabric
+â•  ${prefix}hoorror
+â•  ${prefix}whitebear
+â•  ${prefix}juice
+â•  ${prefix}batman
+â•  ${prefix}multicolor
+â•  ${prefix}collwall
+â•  ${prefix}wonderful
+â•  ${prefix}cool
+â•  ${prefix}sketch
+â•  ${prefix}marvel
+â•  ${prefix}foggy
+â•  ${prefix}writing
+â•  ${prefix}halloweenfire
+â•  ${prefix}halloween
+â•  ${prefix}watercolor
+â•  ${prefix}classic
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•âœª`,
+    footer: `ã€Œ${botname}ã€`,
+    buttons: buttons,
+    headerType: 4
+}
+const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
+}
+break
+            case 'downloadmenu':{
+var unicorn = await getBuffer(picak+'Download Menu')
+
+const buttons = [
+  {buttonId: 'script', buttonText: {displayText: 'Script ðŸ”–'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate ðŸµ'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner ðŸ¤£'}, type: 1}
+]
+const buttonMessage = {
+    image: unicorn,
+    caption: `â•”â•â•â•â•â•â•â•âœªã€Œ DOWNLOAD ã€	
+â• ${prefix}tiktok [url]
+â• ${prefix}tiktokaudio[url]
+â• ${prefix}facebook [url]
+â• ${prefix}mediafire [url]
+â• ${prefix}ytmp3 [url|quality]
+â• ${prefix}ytmp4 [url|quality]
+â• ${prefix}ig [url]
+â• ${prefix}igreels [url]
+â• ${prefix}gitclone [repo link]
+â• ${prefix}soundcloud [url]
+â• ${prefix}zippyshare [url]
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•âœª`,
+    footer: `ã€Œ${botname}ã€`,
+    buttons: buttons,
+    headerType: 4
+}
+const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
+}
+break
+case 'toolsmenu':{
+var unicorn = await getBuffer(picak+'Tools Menu')
+
+const buttons = [
+  {buttonId: 'script', buttonText: {displayText: 'Script ðŸ”–'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate ðŸµ'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner ðŸ¤£'}, type: 1}
+]
+const buttonMessage = {
+    image: unicorn,
+    caption: `â•”â•â•â•â•â•â•â•âœªã€Œ TOOLS ã€	
+â• ${prefix}ssweb [url]
+â• ${prefix}1ssweb [url]
+â• ${prefix}translate [query]
+
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•âœª`,
+    footer: `ã€Œ${botname}ã€`,
+    buttons: buttons,
+    headerType: 4
+}
+const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
+}
+break
+            case 'searchmenu':{
+var unicorn = await getBuffer(picak+'Search Menu')
+
+const buttons = [
+  {buttonId: 'script', buttonText: {displayText: 'Script ðŸ”–'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate ðŸµ'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner ðŸ¤£'}, type: 1}
+]
+const buttonMessage = {
+    image: unicorn,
+    caption: `â•”â•â•â•â•â•â•â•âœªã€Œ SEARCH ã€	
+â• ${prefix}play [query]
+â• ${prefix}song [query]
+â• ${prefix}1pintrest [query]
+â• ${prefix}yts [query]
+â• ${prefix}lyrics [query]
+â• ${prefix}google [query]
+â• ${prefix}gimage [query]
+â• ${prefix}pinterest [query]
+â• ${prefix}image [query]
+â• ${prefix}film [query]
+â• ${prefix}wallpaper [query]
+â• ${prefix}searchgc [query]
+â• ${prefix}happymod [query]
+â• ${prefix}servermc
+â• ${prefix}mcpedl [query]
+â• ${prefix}tvsearch [query]
+â• ${prefix}wikimedia [query]
+â• ${prefix}ytsearch [query]
+â• ${prefix}ringtone [query]
+â• ${prefix}wattpad [query]
+â•  ${prefix}mcserver [ip|port]
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•âœª`,
+    footer: `ã€Œ${botname}ã€`,
+    buttons: buttons,
+    headerType: 4
+}
+const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
+}
+break
+            case 'convertmenu':{
+var unicorn = await getBuffer(picak+'Convert Menu')
+
+const buttons = [
+  {buttonId: 'script', buttonText: {displayText: 'Script ðŸ”–'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate ðŸµ'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner ðŸ¤£'}, type: 1}
+]
+const buttonMessage = {
+    image: unicorn,
+    caption: `â•”â•â•â•â•â•â•â•âœªã€Œ CONVERT ã€	
+â•  ${prefix}toimage [reply stick]
+â•  ${prefix}sticker [reply img|gif]
+â•  ${prefix}take [reply img|gif|stik]
+â•  ${prefix}smeme [reply img]
+â•  ${prefix}emoji [emoji]
+â•  ${prefix}tovideo [reply img]
+â•  ${prefix}togif [reply stick]
+â•  ${prefix}tourl [reply img]
+â•  ${prefix}tovn [reply aud]
+â•  ${prefix}tomp3 [reply vn]
+â•  ${prefix}toaudio [reply vid]
+â•  ${prefix}ebinary [reply txt]
+â•  ${prefix}dbinary [reply txt]
+â•  ${prefix}tinyurl [link]
+â•  ${prefix}styletext [text]
+â• ${prefix}volume [reply aud]
+â• ${prefix}bass [reply aud]
+â• ${prefix}blown [reply aud]
+â• ${prefix}deep [reply aud]
+â• ${prefix}earrape [reply aud]
+â• ${prefix}fast [reply aud]
+â• ${prefix}fat [reply aud]
+â• ${prefix}nightcore [reply aud]
+â• ${prefix}reverse [reply aud]
+â• ${prefix}robot [reply aud]
+â• ${prefix}slow [reply aud]
+â• ${prefix}squirrel [reply aud]
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•âœª`,
+    footer: `ã€Œ${botname}ã€`,
+    buttons: buttons,
+    headerType: 4
+}
+const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
+}
+break
+case 'randomimagemenu':{
+var unicorn = await getBuffer(picak+'Random Image Menu')
+
+const buttons = [
+  {buttonId: 'script', buttonText: {displayText: 'Script ðŸ”–'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate ðŸµ'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner ðŸ¤£'}, type: 1}
+]
+const buttonMessage = {
+    image: unicorn,
+    caption: `â•”â•â•â•â•â•â•â•âœªã€Œ RANDOM IMG ã€	
+â• ${prefix}coffee
+â• ${prefix}woof
+â• ${prefix}meow
+â• ${prefix}lizard
+â• ${prefix}wallneon
+â• ${prefix}wallpubg
+â• ${prefix}wallml
+â• ${prefix}wallrandom
+â• ${prefix}wallcode
+â• ${prefix}animewall [query]
+â• ${prefix}animewall2 [query]
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•âœª`,
+    footer: `ã€Œ${botname}ã€`,
+    buttons: buttons,
+    headerType: 4
+}
+const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
+}
+break
+           case 'emotemenu':{
+var unicorn = await getBuffer(picak+'Emote Menu')
+
+const buttons = [
+  {buttonId: 'script', buttonText: {displayText: 'Script ðŸ”–'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate ðŸµ'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner ðŸ¤£'}, type: 1}
+]
+const buttonMessage = {
+    image: unicorn,
+    caption: `â•”â•â•â•â•â•â•â•âœªã€Œ EMOTE ã€	
+â• ${prefix}instagramemoji
+â• ${prefix}facebookemoji
+â• ${prefix}iphoneemoji
+â• ${prefix}samsungemoji
+â• ${prefix}joyemoji
+â• ${prefix}skypeemoji
+â• ${prefix}twitteremoji
+â• ${prefix}whatsappemoji
+â• ${prefix}microsoftemoji
+â• ${prefix}googleemoji
+â• ${prefix}pediaemoji
+â• ${prefix}microsoftemoji
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•âœª`,
+    footer: `ã€Œ${botname}ã€`,
+    buttons: buttons,
+    headerType: 4
+}
+const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
+}
+break
+            case 'imageeffectmenu':{
+var unicorn = await getBuffer(picak+'Image Effect Menu')
+
+const buttons = [
+  {buttonId: 'script', buttonText: {displayText: 'Script ðŸ”–'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate ðŸµ'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner ðŸ¤£'}, type: 1}
+]
+const buttonMessage = {
+    image: unicorn,
+    caption: `â•”â•â•â•â•â•âœªã€Œ IMG EFFECT ã€	
+â• ${prefix}hollolewd
+â• ${prefix}brazzers [reply img]
+â• ${prefix}burn [reply img]
+â• ${prefix}ddungeon [reply img]
+â• ${prefix}deepfry [reply img]
+â• ${prefix}dictator [reply img]
+â• ${prefix}gay [reply img]
+â• ${prefix}jail [reply img]
+â• ${prefix}lookwhatkarenhave [reply img]
+â• ${prefix}missionpassed [reply img]
+â• ${prefix}ps4 [reply img]
+â• ${prefix}redple [reply img]
+â• ${prefix}sharpen [reply img]
+â• ${prefix}thanos [reply img]
+â• ${prefix}snpier [reply img]
+â• ${prefix}instagram [reply img]
+â• ${prefix}wasted [reply img]
+â• ${prefix}utatoo [reply img]
+â• ${prefix}rip [reply img]
+â• ${prefix}wanted [reply img]
+â• ${prefix}beautiful [reply img]
+â• ${prefix}blur [reply img]
+â• ${prefix}invert [reply img]
+â• ${prefix}greyscale [reply img]
+â• ${prefix}contrast [reply img]
+â• ${prefix}sepia [reply img]
+â• ${prefix}distort [reply img]
+â• ${prefix}glitch [reply img]
+â• ${prefix}approved [reply img]
+â• ${prefix}rejected [reply img]
+â• ${prefix}3000years [reply img]
+â• ${prefix}circle [reply img]
+â• ${prefix}triggeredwebp [reply img]
+â• ${prefix}removebg [reply img]
+â• ${prefix}upscaler [reply img]
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•âœª`,
+    footer: `ã€Œ${botname}ã€`,
+    buttons: buttons,
+    headerType: 4
+}
+const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
+}
+break
+case 'animemenu':{
+var unicorn = await getBuffer(picak+'Anime Menu')
+
+const buttons = [
+  {buttonId: 'script', buttonText: {displayText: 'Script ðŸ”–'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate ðŸµ'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner ðŸ¤£'}, type: 1}
+]
+const buttonMessage = {
+    image: unicorn,
+    caption: `â•”â•â•â•â•â•â•â•âœªã€Œ ANIME ã€	
+â• ${prefix}asuna
+â• ${prefix}anna
+â• ${prefix}chitoge
+â• ${prefix}cosplay
+â• ${prefix}elaina
+â• ${prefix}emilia
+â• ${prefix}gremory
+â• ${prefix}kaguya
+â• ${prefix}kotori
+â• ${prefix}kurumi
+â• ${prefix}mikasa
+â• ${prefix}rize
+â• ${prefix}naruto
+â• ${prefix}yaoi
+â• ${prefix}animeneko
+â• ${prefix}waifu
+â• ${prefix}shinobu
+â• ${prefix}animeawoo
+â• ${prefix}animewaifu
+â• ${prefix}foxgirl
+â• ${prefix}animenom
+â• ${prefix}goose
+â• ${prefix}8ball
+â• ${prefix}avatar
+â• ${prefix}tickle
+â• ${prefix}gecg
+â• ${prefix}feed
+â• ${prefix}animeslap
+â• ${prefix}animepat
+â• ${prefix}animeneko
+â• ${prefix}animekiss
+â• ${prefix}animewlp
+â• ${prefix}animecuddle
+â• ${prefix}animecry
+â• ${prefix}animekill
+â• ${prefix}animelick
+â• ${prefix}animebite
+â• ${prefix}animeyeet
+â• ${prefix}animebully
+â• ${prefix}animebonk
+â• ${prefix}animewink
+â• ${prefix}animepoke
+â• ${prefix}animesmile
+â• ${prefix}animewave
+â• ${prefix}animeawoo
+â• ${prefix}animeblush
+â• ${prefix}animesmug
+â• ${prefix}animeglomp
+â• ${prefix}animehappy
+â• ${prefix}animedance
+â• ${prefix}animecringe
+â• ${prefix}animehighfive
+â• ${prefix}animehandhold
+â• ${prefix}animemegumin
+â• ${prefix}animemegumin
+â• ${prefix}animesmug
+â• ${prefix}loli-waifu
+â• ${prefix}couplepp
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•âœª`,
+    footer: `ã€Œ${botname}ã€`,
+    buttons: buttons,
+    headerType: 4
+}
+const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
+}
+break
+            case 'stickermenu':{
+var unicorn = await getBuffer(picak+'Sticker Menu')
+
+const buttons = [
+  {buttonId: 'script', buttonText: {displayText: 'Script ðŸ”–'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate ðŸµ'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner ðŸ¤£'}, type: 1}
+]
+const buttonMessage = {
+    image: unicorn,
+    caption: `â•”â•â•â•â•â•â•â•âœªã€Œ STICKER ã€	
+â•  ${prefix}patrick
+â•  ${prefix}emoji
+â•  ${prefix}emojimix
+â•  ${prefix}attp
+â•  ${prefix}ttp
+â•  ${prefix}doge
+â•  ${prefix}lovesticker
+â•  ${prefix}animestick
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•âœª`,
+    footer: `ã€Œ${botname}ã€`,
+    buttons: buttons,
+    headerType: 4
+}
+const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
+}
+break
+case 'animestickermenu':{
+var unicorn = await getBuffer(picak+'Anime Sticker Menu')
+
+const buttons = [
+  {buttonId: 'script', buttonText: {displayText: 'Script ðŸ”–'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate ðŸµ'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner ðŸ¤£'}, type: 1}
+]
+const buttonMessage = {
+    image: unicorn,
+    caption: `â•”â•â•â•â•â•â•â•âœªã€Œ ANIME STICKER ã€	
+â• ${prefix}loli
+â• ${prefix}bully
+â• ${prefix}cuddle
+â• ${prefix}cry
+â• ${prefix}hug
+â• ${prefix}awoo
+â• ${prefix}kiss
+â• ${prefix}lick
+â• ${prefix}pat
+â• ${prefix}smug
+â• ${prefix}bonk
+â• ${prefix}yeet
+â• ${prefix}blush
+â• ${prefix}smile
+â• ${prefix}wave
+â• ${prefix}highfive
+â• ${prefix}handhold
+â• ${prefix}nom
+â• ${prefix}glomp
+â• ${prefix}bite
+â• ${prefix}slap
+â• ${prefix}kill
+â• ${prefix}happy
+â• ${prefix}wink
+â• ${prefix}poke
+â• ${prefix}dance
+â• ${prefix}cringe
+â• ${prefix}neko
+â• ${prefix}gura
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•âœª`,
+    footer: `ã€Œ${botname}ã€`,
+    buttons: buttons,
+    headerType: 4
+}
+const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
+}
+break
+case 'nsfwmenu':{
+var unicorn = await getBuffer(picak+'Nsfw Menu')
+
+const buttons = [
+  {buttonId: 'script', buttonText: {displayText: 'Script ðŸ”–'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate ðŸµ'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner ðŸ¤£'}, type: 1}
+]
+const buttonMessage = {
+    image: unicorn,
+    caption: `â•”â•â•â•â•â•â•â•âœªã€Œ NSFW ã€	
+â•  ${prefix}hollolewd
+â•  ${prefix}sideoppai
+â•  ${prefix}animefeets
+â•  ${prefix}animebooty
+â•  ${prefix}animethighss
+â•  ${prefix}animearmpits
+â•  ${prefix}lewdanimegirls
+â•  ${prefix}biganimetiddies
+â•  ${prefix}ahegao
+â•  ${prefix}ass
+â•  ${prefix}bdsm
+â•  ${prefix}blowjob
+â•  ${prefix}cum
+â•  ${prefix}cuckold
+â•  ${prefix}ero
+â•  ${prefix}femdom
+â•  ${prefix}foot
+â•  ${prefix}gangbang
+â•  ${prefix}glasses
+â•  ${prefix}hentai
+â•  ${prefix}jahy
+â•  ${prefix}maid
+â•  ${prefix}manga
+â•  ${prefix}neko
+â•  ${prefix}orgy
+â•  ${prefix}panties
+â•  ${prefix}pussy
+â•  ${prefix}sfwneko
+â•  ${prefix}tentacles
+â•  ${prefix}thighs
+â•  ${prefix}yuri
+â•  ${prefix}nudeloli
+â•  ${prefix}zettairyouiki
+â•  ${prefix}lewd
+â•  ${prefix}eron
+â•  ${prefix}anal
+â•  ${prefix}keta
+â•  ${prefix}tits
+â•  ${prefix}kuni
+â•  ${prefix}solog
+â•  ${prefix}erok
+â•  ${prefix}feetg
+â•  ${prefix}lewdk
+â•  ${prefix}erofeet
+â•  ${prefix}holoero
+â•  ${prefix}classic
+â•  ${prefix}erokemo
+â•  ${prefix}futanari
+â•  ${prefix}eroyuri
+â•  ${prefix}yaoi
+â•  ${prefix}blowjobgif
+â•  ${prefix}hentaigif
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•âœª`,
+    footer: `ã€Œ${botname}ã€`,
+    buttons: buttons,
+    headerType: 4
+}
+const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
+}
+break
+case 'funmenu':{
+var unicorn = await getBuffer(picak+'Fun Menu')
+
+const buttons = [
+  {buttonId: 'script', buttonText: {displayText: 'Script ðŸ”–'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate ðŸµ'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner ðŸ¤£'}, type: 1}
+]
+const buttonMessage = {
+    image: unicorn,
+    caption: `â•”â•â•â•â•â•â•â•âœªã€Œ Fun ã€	
+â•  ${prefix}how [text
+â•  ${prefix}when [text]
+â•  ${prefix}where [text]
+â•  ${prefix}is [text]
+â•  ${prefix}what [text]
+â•  ${prefix}can [text]
+â•  ${prefix}rate [text]
+â•  ${prefix}beautifulcheck [tag]
+â•  ${prefix}awesomecheck [tag]
+â•  ${prefix}prettycheck [tag]
+â•  ${prefix}lesbiancheck [tag]
+â•  ${prefix}gaycheck [tag]
+â•  ${prefix}cutecheck [tag]
+â•  ${prefix}uglycheck [tag]
+â•  ${prefix}hornycheck [tag]
+â•  ${prefix}charactercheck [tag]
+â•  ${prefix}lovelycheck [tag]
+â•  ${prefix}couple
+â•  ${prefix}mysoulmate
+â•  ${prefix}hot
+â•  ${prefix}sexy
+â•  ${prefix}kind
+â•  ${prefix}idiot
+â•  ${prefix}handsome
+â•  ${prefix}beautiful
+â•  ${prefix}cute
+â•  ${prefix}pretty
+â•  ${prefix}lesbian
+â•  ${prefix}noob
+â•  ${prefix}bastard
+â•  ${prefix}foolish
+â•  ${prefix}nerd
+â•  ${prefix}asshole
+â•  ${prefix}gay
+â•  ${prefix}smart
+â•  ${prefix}stubble
+â•  ${prefix}dog
+â•  ${prefix}horny
+â•  ${prefix}cunt
+â•  ${prefix}wibu
+â•  ${prefix}noobra
+â•  ${prefix}nibba
+â•  ${prefix}nibbi
+â•  ${prefix}comrade
+â•  ${prefix}mumu
+â•  ${prefix}rascal
+â•  ${prefix}scumbag
+â•  ${prefix}nuts
+â•  ${prefix}fagot
+â•  ${prefix}scoundrel
+â•  ${prefix}ditch
+â•  ${prefix}dope
+â•  ${prefix}gucci
+â•  ${prefix}lit
+â•  ${prefix}dumbass
+â•  ${prefix}crackhead
+â•  ${prefix}mf
+â•  ${prefix}motherfucker
+â•  ${prefix}sucker
+â•  ${prefix}fuckboy
+â•  ${prefix}playboy
+â•  ${prefix}fuckgirl
+â•  ${prefix}playgirl
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•âœª`,
+    footer: `ã€Œ${botname}ã€`,
+    buttons: buttons,
+    headerType: 4
+}
+const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
+}
+break
+case 'soundmenu':{
+var unicorn = await getBuffer(picak+'Sound Menu')
+
+const buttons = [
+  {buttonId: 'script', buttonText: {displayText: 'Script ðŸ”–'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate ðŸµ'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner ðŸ¤£'}, type: 1}
+]
+const buttonMessage = {
+    image: unicorn,
+    caption: `â•”â•â•â•â•â•â•â•âœªã€Œ Sound ã€	
+â•  ${prefix}sound1
+â•  ${prefix}sound2
+â•  ${prefix}sound3
+â•  ${prefix}sound4
+â•  ${prefix}sound5
+â•  ${prefix}sound6
+â•  ${prefix}sound7
+â•  ${prefix}sound8
+â•  ${prefix}sound9
+â•  ${prefix}sound10
+â•  ${prefix}sound11
+â•  ${prefix}sound12
+â•  ${prefix}sound13
+â•  ${prefix}sound14
+â•  ${prefix}sound15
+â•  ${prefix}sound16
+â•  ${prefix}sound17
+â•  ${prefix}sound18
+â•  ${prefix}sound19
+â•  ${prefix}sound20
+â•  ${prefix}sound21
+â•  ${prefix}sound22
+â•  ${prefix}sound23
+â•  ${prefix}sound24
+â•  ${prefix}sound25
+â•  ${prefix}sound26
+â•  ${prefix}sound27
+â•  ${prefix}sound28
+â•  ${prefix}sound29
+â•  ${prefix}sound30
+â•  ${prefix}sound31
+â•  ${prefix}sound32
+â•  ${prefix}sound33
+â•  ${prefix}sound34
+â•  ${prefix}sound35
+â•  ${prefix}sound36
+â•  ${prefix}sound37
+â•  ${prefix}sound38
+â•  ${prefix}sound39
+â•  ${prefix}sound40
+â•  ${prefix}sound41
+â•  ${prefix}sound42
+â•  ${prefix}sound43
+â•  ${prefix}sound44
+â•  ${prefix}sound45
+â•  ${prefix}sound46
+â•  ${prefix}sound47
+â•  ${prefix}sound48
+â•  ${prefix}sound49
+â•  ${prefix}sound50
+â•  ${prefix}sound51
+â•  ${prefix}sound52
+â•  ${prefix}sound53
+â•  ${prefix}sound54
+â•  ${prefix}sound55
+â•  ${prefix}sound56
+â•  ${prefix}sound57
+â•  ${prefix}sound58
+â•  ${prefix}sound59
+â•  ${prefix}sound60
+â•  ${prefix}sound61
+â•  ${prefix}sound62
+â•  ${prefix}sound63
+â•  ${prefix}sound64
+â•  ${prefix}sound65
+â•  ${prefix}sound66
+â•  ${prefix}sound67
+â•  ${prefix}sound68
+â•  ${prefix}sound69
+â•  ${prefix}sound70
+â•  ${prefix}sound71
+â•  ${prefix}sound72
+â•  ${prefix}sound73
+â•  ${prefix}sound74
+â•  ${prefix}sound75
+â•  ${prefix}sound76
+â•  ${prefix}sound77
+â•  ${prefix}sound78
+â•  ${prefix}sound79
+â•  ${prefix}sound80
+â•  ${prefix}sound81
+â•  ${prefix}sound82
+â•  ${prefix}sound83
+â•  ${prefix}sound84
+â•  ${prefix}sound85
+â•  ${prefix}sound86
+â•  ${prefix}sound87
+â•  ${prefix}sound88
+â•  ${prefix}sound89
+â•  ${prefix}sound90
+â•  ${prefix}sound91
+â•  ${prefix}sound92
+â•  ${prefix}sound93
+â•  ${prefix}sound94
+â•  ${prefix}sound95
+â•  ${prefix}sound96
+â•  ${prefix}sound97
+â•  ${prefix}sound98
+â•  ${prefix}sound99
+â•  ${prefix}sound100
+â•  ${prefix}sound101
+â•  ${prefix}sound102
+â•  ${prefix}sound103
+â•  ${prefix}sound104
+â•  ${prefix}sound105
+â•  ${prefix}sound106
+â•  ${prefix}sound107
+â•  ${prefix}sound108
+â•  ${prefix}sound109
+â•  ${prefix}sound110
+â•  ${prefix}sound111
+â•  ${prefix}sound112
+â•  ${prefix}sound113
+â•  ${prefix}sound114
+â•  ${prefix}sound115
+â•  ${prefix}sound116
+â•  ${prefix}sound117
+â•  ${prefix}sound118
+â•  ${prefix}sound119
+â•  ${prefix}sound120
+â•  ${prefix}sound121
+â•  ${prefix}sound122
+â•  ${prefix}sound123
+â•  ${prefix}sound124
+â•  ${prefix}sound125
+â•  ${prefix}sound126
+â•  ${prefix}sound127
+â•  ${prefix}sound128
+â•  ${prefix}sound129
+â•  ${prefix}sound130
+â•  ${prefix}sound131
+â•  ${prefix}sound132
+â•  ${prefix}sound133
+â•  ${prefix}sound134
+â•  ${prefix}sound135
+â•  ${prefix}sound136
+â•  ${prefix}sound137
+â•  ${prefix}sound138
+â•  ${prefix}sound139
+â•  ${prefix}sound140
+â•  ${prefix}sound141
+â•  ${prefix}sound142
+â•  ${prefix}sound143
+â•  ${prefix}sound144
+â•  ${prefix}sound145
+â•  ${prefix}sound146
+â•  ${prefix}sound147
+â•  ${prefix}sound148
+â•  ${prefix}sound149
+â•  ${prefix}sound150
+â•  ${prefix}sound151
+â•  ${prefix}sound152
+â•  ${prefix}sound153
+â•  ${prefix}sound154
+â•  ${prefix}sound155
+â•  ${prefix}sound156
+â•  ${prefix}sound157
+â•  ${prefix}sound158
+â•  ${prefix}sound159
+â•  ${prefix}sound160
+â•  ${prefix}sound161
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•âœª`,
+    footer: `ã€Œ${botname}ã€`,
+    buttons: buttons,
+    headerType: 4
+}
+const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
+}
+break
+case 'gamemenu':{
+var unicorn = await getBuffer(picak+'Game Menu')
+
+const buttons = [
+  {buttonId: 'script', buttonText: {displayText: 'Script ðŸ”–'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate ðŸµ'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner ðŸ¤£'}, type: 1}
+]
+const buttonMessage = {
+    image: unicorn,
+    caption: `â•”â•â•â•â•â•â•â•âœªã€Œ GAME ã€	
+â•  ${prefix}truth
+â•  ${prefix}dare
+â•  ${prefix}tictactoe
+â•  ${prefix}delttt
+â•  ${prefix}guess [option]
+â•  ${prefix}math [mode]
+â•  ${prefix}suitpvp [tag]
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•âœª`,
+    footer: `ã€Œ${botname}ã€`,
+    buttons: buttons,
+    headerType: 4
+}
+const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
+}
+break
+            case 'anonymousmenu':{
+var unicorn = await getBuffer(picak+'Anonymous Menu')
+
+const buttons = [
+  {buttonId: 'script', buttonText: {displayText: 'Script ðŸ”–'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate ðŸµ'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner ðŸ¤£'}, type: 1}
+]
+const buttonMessage = {
+    image: unicorn,
+    caption: `â•”â•â•â•âœªã€Œ ANONYMOUS ã€	
+â• ${prefix}anonymous
+â• ${prefix}start
+â• ${prefix}next
+â• ${prefix}leave
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•âœª`,
+    footer: `ã€Œ${botname}ã€`,
+    buttons: buttons,
+    headerType: 4
+}
+const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
+}
+break
+case 'databasemenu':{
+var unicorn = await getBuffer(picak+'Database Menu')
+
+const buttons = [
+  {buttonId: 'script', buttonText: {displayText: 'Script ðŸ”–'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate ðŸµ'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner ðŸ¤£'}, type: 1}
+]
+const buttonMessage = {
+    image: unicorn,
+    caption: `â•”â•â•â•âœªã€Œ DATABASE ã€	
+â•  ${prefix}setcmd
+â•  ${prefix}listcmd
+â•  ${prefix}delcmd
+â•  ${prefix}lockcmd
+â•  ${prefix}addmsg
+â•  ${prefix}listmsg
+â•  ${prefix}getmsg
+â•  ${prefix}delmsg
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•âœª`,
+    footer: `ã€Œ${botname}ã€`,
+    buttons: buttons,
+    headerType: 4
+}
+const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
+}
+break
+case 'othermenu':{
+var unicorn = await getBuffer(picak+'Other Menu')
+
+const buttons = [
+  {buttonId: 'script', buttonText: {displayText: 'Script ðŸ”–'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate ðŸµ'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner ðŸ¤£'}, type: 1}
+]
+const buttonMessage = {
+    image: unicorn,
+    caption: `â•”â•â•â•â•â•â•â•âœªã€Œ OTHER ã€	
+â•  ${prefix}afk
+â•  ${prefix}id
+â•  ${prefix}toqr [link]
+â•  ${prefix}repeat
+â•  ${prefix}readmore [text]
+â•  ${prefix}toviewonce
+â•  ${prefix}fliptext [text]] 
+â•  ${prefix}alive
+â•  ${prefix}script
+â•  ${prefix}speedtest
+â•  ${prefix}ping
+â•  ${prefix}owner
+â•  ${prefix}menu
+â•  ${prefix}delete
+â•  ${prefix}chatinfo
+â•  ${prefix}quoted
+â•  ${prefix}listpc
+â•  ${prefix}listgc
+â•  ${prefix}donate
+â•  ${prefix}request
+â•  ${prefix}report [bug]
+â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•âœª`,
+    footer: `ã€Œ${botname}ã€`,
+    buttons: buttons,
+    headerType: 4
+}
+const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
+}
+break
+            case 'sound1':
 case 'sound2':
 case 'sound3':
 case 'sound4':
