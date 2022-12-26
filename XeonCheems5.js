@@ -4194,6 +4194,25 @@ headerType: 1
                     return('Error!')
                 })}
 break
+			   case 'xximage' :
+{
+if (!m.isGroup) return m.reply(mess.group)
+if (!AntiNsfw) return m.reply(mess.nsfw)
+if (!text) throw `Example : ${prefix} tits`
+m.reply(mess.wait)
+ waifudd = await getBuffer(`https://zenzapis.xyz/searching/gimage2?query=${text}?apikey=${global.zenzkey}`)       
+ let trapbot = [
+    {buttonId: `${command}`, buttonText: {displayText: `Next âš¡`}, type: 1},
+    ]
+  let button2Messages = {
+   image: waifudd,
+   caption:  `Here you go!`,
+  buttons: trapbot,
+  headerType: 1
+  }     
+            await XeonBotInc.sendMessage(m.chat, button2Messages, { quoted:m }).catch(err => {
+                    return('Error!')
+                })}
 			case 'hentaigif': {
     if (isBan) return reply(mess.banned)	 			
     if (!AntiNsfw) return reply(mess.nonsfw)
