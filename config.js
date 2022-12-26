@@ -1,7 +1,7 @@
 const fs = require('fs')
 const chalk = require('chalk')
 //api
-global.keysZens = ['285c513f6556', '68637855ac', '66aa575454', 'ead81e891b', '8331b843f7', 'ec3fe6f05831', '0c65d4c037']
+global.keysZens = ['285c513f6556', '68637855ac', '66aa575454', 'ead81e891b', '8331b843f7', 'ec3fe6f05831', '0c65d4c037', 'e8b8aa98d8', 'e3d2ce703f', '230d673483']
 global.zenzkey = keysZens[Math.floor(keysZens.length * Math.random())]
 global.lolhuman = "85faf717d0545d14074659ad"
 global.ibrahim = ['TcjDtsMJ', 'kUF2aBjM', '2nlLuqfy', 'rErGxBzr', 'KMCJgIRH','m242ANUO', 'WoH9KRqY', 'qjOpwJIA', 'xsTFGsFc', 'wYBojGOu']
