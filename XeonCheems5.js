@@ -5841,7 +5841,7 @@ m.reply(mess.wait)
     if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (args[0] === "mp4") {
-Miku.sendMessage(from, {video:{url:args[1]}, caption:'Here it is...', mimetype:'video/mp4'}, {quoted:m})
+XeonBotInc.sendMessage(from, {video:{url:args[1]}, caption:'Here it is...', mimetype:'video/mp4'}, {quoted:m})
 } else if (args[0] === "jpg") {
 XeonBotInc.sendMessage(from, {image:{url:args[1]}, caption:'Here it is...'}, {quoted:m})
 } else {
@@ -5859,10 +5859,23 @@ Owner: Ibrahim
 Title: ${tt_res.result.title}
 Source: ${q}
 Video is being sent...`)
-conn.sendMessage(from,{video:{url:tt_res.result.hd}, caption:'No Watermark!'}, {quotes:msg})
+XeonBotInc.sendMessage(from,{video:{url:tt_res.result.hd}, caption:'No Watermark!'}, {quotes:msg})
 }).catch((err) => {
 reply('Error Occurred!!\nUrl is not valid')
 })
+}
+break
+		case 'pintrestdl':{
+if (!q) return reply('Example :\${prefix}$facebook https://facebook.com/someting')
+reply(mess.wait)
+ waifudd = await axios.get(`https://api.akuari.my.id/downloader/pindl?link=${q}`)
+ if (waifudd.data.data.url === "mp4") {
+XeonBotInc.sendMessage(from, {video:waifudd.data.data.url, caption:'Here it is...', mimetype:'video/mp4'}, {quoted:m})
+}else if (waifudd.data.data.url === "jpg") {
+XeonBotInc.sendMessage(from, {image:waifudd.data.data.url, caption:'Here it is...'}, {quoted:m})
+} else {
+reply("Error! ")
+}
 }
 break
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -6372,6 +6385,7 @@ const buttonMessage = {
 │⭔  ${prefix}ytmp4 [url|quality]
 │⭔  ${prefix}ig [url]
 │⭔  ${prefix}igreels [url]
+│⭔  ${prefix}pintrestdl [url]
 │⭔  ${prefix}gitclone [repo link]
 │⭔  ${prefix}soundcloud [url]
 │⭔  ${prefix}zippyshare [url]
@@ -7153,6 +7167,7 @@ const buttonMessage = {
 â• ${prefix}ytmp4 [url|quality]
 â• ${prefix}ig [url]
 â• ${prefix}igreels [url]
+â• ${prefix}pintrestdl [url]
 â• ${prefix}gitclone [repo link]
 â• ${prefix}soundcloud [url]
 â• ${prefix}zippyshare [url]
