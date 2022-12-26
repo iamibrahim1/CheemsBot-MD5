@@ -7091,8 +7091,8 @@ const buttonMessage = {
 │⭔ ${prefix}halloween
 │⭔ ${prefix}watercolor
 │⭔ ${prefix}classic
-───────────────────┈❖❖┈───────────────────
-    footer: `ã€Œ${botname}ã€`,
+───────────────────┈❖❖┈───────────────────`
+    footer: `{botname}`,
     buttons: buttons,
     headerType: 4
 }
