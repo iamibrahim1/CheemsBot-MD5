@@ -5888,16 +5888,13 @@ Author: Ibrahim
 Title: ${tt_res.hasil.title}
 Source: ${q}
 Post is being sent...`)
-}){else if (tt_res.result.url === "mp4") {
-conn.sendMessage(from,{video:{url:tt_res.result.url}, caption:'Here it is...'}, {quotes:msg})
-}}{else if (tt_res.result.url === "jpg") {
-XeonBotInc.sendMessage(from, {image:tt_res.result.url, caption:'Here it is...'}, {quoted:m})}
- else {
+ if (tt_res.result.url === "mp4") {
+XeonBotInc.sendMessage(from, {video:tt_res.result.url, caption:'Here it is...', mimetype:'video/mp4'}, {quoted:m})
+}else if (tt_res.result.url === "jpg") {
+XeonBotInc.sendMessage(from, {image:tt_res.result.url, caption:'Here it is...'}, {quoted:m})
+} else {
 reply("Error! ")
 }
-}.catch((err) => {
-reply('Error Occurred!!\nUrl is not valid')
-})
 }
 break
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
