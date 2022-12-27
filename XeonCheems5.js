@@ -5883,10 +5883,11 @@ if (!q) return reply(`Example :\${prefix}$twitter your video or picture link`)
 reply(mess.wait)
 fetchJson(`https://api.akuari.my.id/downloader/twitter2?link=${q}`)
 .then(tt_res => {
-reply(`𝗧𝗜𝗞𝗧𝗢𝗞 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗
+reply(`Twitter download
 Author: Ibrahim
 Title: ${tt_res.hasil.title}
-Source: ${q}`
+Source: ${q}
+Post is being sent...`)
 }){else if (tt_res.result.url === "mp4") {
 conn.sendMessage(from,{video:{url:tt_res.result.url}, caption:'Here it is...'}, {quotes:msg})
 }){else if (tt_res.result.url === "jpg") {
