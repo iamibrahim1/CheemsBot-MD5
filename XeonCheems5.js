@@ -5878,7 +5878,7 @@ reply("Error! ")
 }
 }
 break
-		case 'twitter':{
+				case 'twitter':{
 if (!q) return reply(`Example :\${prefix}$twitter your video or picture link`)
 reply(mess.wait)
 fetchJson(`https://api.akuari.my.id/downloader/twitter2?link=${q}`)
@@ -5895,7 +5895,7 @@ XeonBotInc.sendMessage(from, {image:tt_res.result.url, caption:'Here it is...'},
 } else {
 reply("Error! ")
 }
-}
+})
 }
 break
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
